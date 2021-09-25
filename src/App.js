@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+// import => Me lo trae 
+// NavBar => el nombre del componente
+// from => de donde lo trae
+// ruta => ruta es donde está el componente
+import NavBar from "./components/NavBar/NavBar.js";
+import CardWidget from "./components/CartWidget/CardWidget.js";
+import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer.js";
 
 function App() {
+
+  /** funciones, lógica, variables, etc **/
+  const saludo = "Bienvenido a Ecommerce";
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavBar/>
+      <ItemListContainer content={saludo}/>
+      <CardWidget text="Carrito"/>
     </div>
   );
 }
