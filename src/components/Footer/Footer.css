@@ -1,0 +1,45 @@
+.footer{
+    min-height: 200px;
+}
+
+.cajaFooter{
+    display: flex;
+    justify-content: space-around;
+}
+
+.logoNombre {
+    font-size: 7vh;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: none;
+    color: #212529;
+}
+
+.logoNombre:hover{
+    color: #00538c;
+}
+
+.listaFooter{
+    list-style: none;
+    margin-left: 3vw;
+    margin-right: 2vw;
+}
+
+.itemListaFooter{
+    color:#212529;
+    font-size: 3vh;
+    text-decoration: none;
+}
+
+@media(max-width: 650px){
+    .cajaFooter{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-center;
+        align-items: center;
+    }
+
+    .listaFooter{
+        margin: 0px 1.5rem 1rem 0;
+    }
+}

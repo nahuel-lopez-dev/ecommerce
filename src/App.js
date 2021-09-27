@@ -4,6 +4,7 @@
 // ruta => ruta es donde está el componente
 import NavBar from "./components/NavBar/NavBar.js";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer.js";
+import { Footer } from "./components/Footer/Footer.js";
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
     <div>
       <NavBar/>
       <ItemListContainer content={saludo}/>
+      <Footer />
     </div>
   );
 }

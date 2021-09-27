@@ -7,10 +7,10 @@ export const navbar = () => {
         <div>
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className="border-bottom p-4">
                 <Container>
-                    <Navbar.Brand href="#home" className="fs-1 me-4">Ecommerce</Navbar.Brand>
+                    <Navbar.Brand href="#home" className="me-5 logoNombre">Ecommerce</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="me-auto fs-4">
+                        <Nav className="me-4 fs-4">
                             <Nav.Link href="#features">Home</Nav.Link>
                             <Nav.Link href="#pricing">Nosotros</Nav.Link>
                             <NavDropdown title="Productos" id="collasible-nav-dropdown">
@@ -21,7 +21,7 @@ export const navbar = () => {
                                 {/* <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> */}
                             </NavDropdown>
                         </Nav>
-                        <Nav>
+                        <Nav className="ms-auto">
                             <Nav.Link href="#deets" className="mt-md-3">Crear cuenta</Nav.Link>
                             <Nav.Link eventKey={2} href="#memes" className="mt-md-3">Iniciar sesión</Nav.Link>
                             <CardWidget text=" Carrito 6"/>

@@ -1,0 +1,29 @@
+import React from 'react';
+import "./Footer.css"
+
+export const Footer = () => {
+    return (
+        <div>
+            <div className="container-fluid bg-light border-top footer">
+                <div className="row">
+                    <div className="mt-5">
+                        <div className="cajaFooter">
+                            <ul className="listaFooter">
+                                <li><a href="#" className="itemListaFooter">Home</a></li>
+                                <li><a href="#" className="itemListaFooter">Nosotros</a></li>
+                                <li><a href="#" className="itemListaFooter">Productos</a></li>
+                            </ul>
+                            <div>
+                                <a href="#"><img src="" alt="Logo de instagram" /></a>
+                            </div>
+                            <div>
+                                <a href="#"><img src="#" alt="logo de twitter" /></a>
+                            </div>
+                            <a className="logoNombre m-4">Ecommerce</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}

@@ -7,7 +7,7 @@ export default function CardWidget({text}) {
     return (
         <div>
             <Button className="btn btn-dark mt-md-2 p-3">
-                <FaShoppingCart ClassName="m-1"/>
+                <FaShoppingCart className="m-1"/>
                 { text }
             </Button>
         </div>
