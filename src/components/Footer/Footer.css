@@ -28,7 +28,12 @@
 .itemListaFooter{
     color:#212529;
     font-size: 3vh;
+    font-style: italic;
     text-decoration: none;
+}
+
+.itemListaFooter:hover{
+    color: #00538c;
 }
 
 @media(max-width: 650px){
@@ -41,5 +46,10 @@
 
     .listaFooter{
         margin: 0px 1.5rem 1rem 0;
+    }
+    
+    .logoNombre{
+        font-size: 5vh;
+        padding-right: 30px;
     }
 }

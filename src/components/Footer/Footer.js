@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import { LogoIcono } from '../LogoIcono/LogoIcono'
 import "./Footer.css"
 
 export const Footer = () => {
@@ -19,7 +20,10 @@ export const Footer = () => {
                             <div>
                                 <a href="#"><img src="#" alt="logo de twitter" /></a>
                             </div>
-                            <a className="logoNombre m-4">Ecommerce</a>
+                            <a href="#" className="logoNombre m-4 d-flex">
+                                <LogoIcono />
+                                <p>Ecommerce</p>
+                            </a>
                         </div>
                     </div>
                 </div>

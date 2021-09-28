@@ -1,7 +1,7 @@
 .logoNombre {
-    font-size: 7vh;
-    font-weight: bold;
-    font-style: italic;
-    text-decoration: none;
     color: #212529;
+    font-size: 7vh;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
 }
