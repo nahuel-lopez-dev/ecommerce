@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react' ya no es necesario en las nuevas versiones
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
 import CardWidget from '../CartWidget/CardWidget'
 import { LogoIcono } from '../LogoIcono/LogoIcono'

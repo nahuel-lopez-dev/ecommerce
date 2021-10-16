@@ -9,12 +9,12 @@ import { Footer } from "./components/Footer/Footer.js";
 function App() {
 
   /** funciones, lógica, variables, etc **/
-  const saludo = "Bienvenid@ a Ecommerce";
+  const greeting = "Bienvenid@ a Ecommerce";
 
   return (
-    <div>
+    <div className="bg-light">
       <NavBar/>
-      <ItemListContainer content={saludo}/>
+      <ItemListContainer content={greeting}/>
       <Footer />
     </div>
   );

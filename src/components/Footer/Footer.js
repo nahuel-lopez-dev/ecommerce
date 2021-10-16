@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react' Ya no es necesario en las nuevas versiones
 import { LogoIcono } from '../LogoIcono/LogoIcono'
 import "./Footer.css"
 
