@@ -1,8 +1,8 @@
 // import => Me lo trae 
-// NavBar => el nombre del componente
+// Header => el nombre del componente, en UpperCamelCase
 // from => de donde lo trae
 // ruta => ruta es donde está el componente
-import NavBar from "./components/NavBar/NavBar.js";
+import Header from "./components/Header/Header.js";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer.js";
 import { Footer } from "./components/Footer/Footer.js";
 
@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="bg-light">
-      <NavBar/>
+      <Header/>
       <ItemListContainer content={greeting}/>
       <Footer />
     </div>
