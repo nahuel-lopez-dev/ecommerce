@@ -10,11 +10,12 @@ function App() {
 
   /** funciones, lógica, variables, etc **/
   const greeting = "Bienvenid@ a Ecommerce";
+  const slogan= "Donde nunca es tarde para encontrar lo que buscás";
 
   return (
     <div className="bg-light">
       <Header/>
-      <ItemListContainer content={greeting}/>
+      <ItemListContainer titulo={greeting} subtitulo={slogan}/>
       <Footer />
     </div>
   );

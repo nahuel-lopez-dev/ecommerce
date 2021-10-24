@@ -1,22 +1,40 @@
 import React, {useState} from 'react'
 import "./ItemCount.css"
 
-export const ItemCount = ({ initial = 0 }) => {
+export const ItemCount = ({ stock, initial }) => {
 
-    const [ contador, setContador ] = useState( initial );
+    const [ cantidad, setCantidad] = useState( stock );
+    const [ counter, setCounter ] = useState( initial );
 
-    const sube = () => setContador( contador +1 );
-    const baja = () => setContador( contador -1 );
-    const resetea = () => setContador( initial )          
+    //Para agregar productos. Tiena la condición de sumar mientras el contador sea menor que el stock. Si alcanza el mismo valor que el stock, ya no permite sumar
+    const handleAdd = () => {
+        if(cantidad > 0)
+            setCounter(counter +1)
+            setCantidad(cantidad -1)
+    } 
+    //Para sacar productos. Tiene la condición de restar mientras el contador sea mayor a cero. Si llega a ser igual a cero, ya no permite restar
+    const handleSubtract = () => {
+        if(counter > 0){
+            setCounter(counter -1)
+            setCantidad(cantidad +1)
+        }
+    } 
+
+    const onAdd = () => {
+        alert(`Se agregarán: ${counter} unidades a su carrito`)
+    }          
 
     return (
         <div>
             <h3 className="text-dark m-3 p-3 fs-3 text-center">ItemCount</h3>
+            <p className="text-dark m-3 p-3 fs-3 text-center">Stock disponible: {cantidad}</p>
+            <div className="text-center d-flex align-items-center justify-content-center">
+                <button className="btn btn-danger btn-lg m-3 p-2" onClick={handleSubtract} disabled={stock === 0}> -1 </button>
+                <h3 className="m-3">{ counter }</h3>
+                <button className="btn btn-danger btn-lg m-3 p-2" onClick={handleAdd} disabled={cantidad === 0}>+1</button>
+            </div>
             <div className="text-center">
-                <h3>{ contador }</h3>
-                <button className="btn btn-dark btn-lg m-2 p-2" onClick={ sube }>+1</button>
-                <button className="btn btn-dark btn-lg m-2 p-2" onClick={ resetea }>Reset</button>
-                <button className="btn btn-dark btn-lg m-2 p-2" onClick={ baja }>-1</button>
+                <button className="btn btn-dark btn-lg p-2" onClick={onAdd}>Agregar al carrito</button>
             </div>
         </div>
     )
