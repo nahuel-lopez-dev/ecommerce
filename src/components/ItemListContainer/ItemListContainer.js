@@ -1,5 +1,6 @@
 // import React from 'react' ya no es necesario en las nuevas versiones
 import { ItemCount } from '../ItemCount/ItemCount'
+import { ItemList } from '../ItemList/ItemList';
 import "./ItemListContainer.css"
 
 export const ItemListContainer = ( { titulo, subtitulo } ) => {
@@ -10,9 +11,10 @@ export const ItemListContainer = ( { titulo, subtitulo } ) => {
 
     return (
         <div>
-            <h1 className="colorItemListContainer bg-gradient text-white text-center m-5 p-2 rounded">{titulo}</h1>
-            <h2 className="text-secondary display-4 text-center m-5 p-2 rounded">{subtitulo}</h2>
+            <h1 className="colorItemListContainer bg-gradient text-white text-center mt-5 p-4">{titulo}</h1>
+            <h2 className="text-secondary display-4 text-center m-2 p-2 rounded">{subtitulo}</h2>
             <ItemCount stock = {cantidad} initial={unidadesPedidas} />
+            <ItemList />
         </div>
     )
 }
