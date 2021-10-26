@@ -14,7 +14,7 @@ const dataBase = [
         desc:'Caja sorpresa con variedad de bombones',
         precio:'3000',
         categoria:'Caja',
-        stock:'5',
+        stock:'10',
         imagen:''
     },
     {
@@ -23,7 +23,7 @@ const dataBase = [
         desc:'Barra con super chocolate rellena con super dulce de leche',
         precio:'3000',
         categoria:'Barra',
-        stock:'5',
+        stock:'8',
         imagen:''
     },
     {
@@ -32,7 +32,7 @@ const dataBase = [
         desc:'Super oblea rellena de crema de avellanas cubierta con chocolate semiamargo',
         precio:'3000',
         categoria:'Oblea',
-        stock:'5',
+        stock:'8',
         imagen:''
     },
     {
@@ -41,7 +41,7 @@ const dataBase = [
         desc:'Bombones de chocolate semiamargo con interior de crema de avellana',
         precio:'3000',
         categoria:'Bombones',
-        stock:'5',
+        stock:'15',
         imagen:''
     },
     {
@@ -50,7 +50,7 @@ const dataBase = [
         desc:'Bombones de chocolate con leche rellenos con crema de maní',
         precio:'3000',
         categoria:'Bombones',
-        stock:'5',
+        stock:'15',
         imagen:''
     },
     {

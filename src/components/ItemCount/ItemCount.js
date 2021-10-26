@@ -6,7 +6,7 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
     const [ cantidad, setCantidad] = useState( stock );
     const [ counter, setCounter ] = useState( initial );
 
-    //Para agregar productos. Tiena la condición de sumar mientras el contador sea menor que el stock. Si alcanza el mismo valor que el stock, ya no permite sumar
+    //Para agregar productos. Tiena la condición de sumar, y en el button donde se aplica lo acompaña la propiedad disabled para el stock = 0. De este modo, mientras el contador sea menor que el stock, permite sumar. Si alcanza el mismo valor que el stock, ya no permite sumar.
     const handleAdd = () => {
         if(cantidad > 0)
             setCounter(counter +1)
@@ -19,7 +19,7 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
             setCantidad(cantidad +1)
         }
     } 
-
+    //Para generar un alert de la cantidad de unidades que se agregarán al carrito.
     const addProducts = () => {
         if(counter !== 0)
         alert(`Se agregarán: ${counter} unidades a su carrito`)

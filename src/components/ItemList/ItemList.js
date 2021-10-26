@@ -24,9 +24,9 @@ export const ItemList = () => {
 
     return (
         <div>
-            {cargando ? <h2>SE ESTÁN CARGANDO LOS PRODUCTOS...</h2> :
+            {cargando ? <h2 className="bg-dark text-center text-danger p-4">SE ESTÁN CARGANDO LOS PRODUCTOS...</h2> :
             productos.map((producto)=> 
-            <Item key={producto.id} nombre={producto.nombre} desc={producto.desc} precio={producto.precio} /> )}
+            <Item key={producto.id} nombre={producto.nombre} desc={producto.desc} precio={producto.precio} stock={producto.stock} /> )}
         </div>
     )
 }
