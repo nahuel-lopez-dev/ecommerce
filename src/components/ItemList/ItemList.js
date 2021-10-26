@@ -26,7 +26,7 @@ export const ItemList = () => {
         <div>
             {cargando ? <h2>SE ESTÁN CARGANDO LOS PRODUCTOS...</h2> :
             productos.map((producto)=> 
-            <Item key={producto.id} nombre={producto.desc} precio={producto.precio} /> )}
+            <Item key={producto.id} nombre={producto.nombre} desc={producto.desc} precio={producto.precio} /> )}
         </div>
     )
 }
