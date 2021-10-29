@@ -1,32 +1,19 @@
-import dataBase from "../../dataBase/dataBase"
 import Item from "../Item/Item"
-import React, {useState, useEffect} from 'react'
 
-export const ItemList = () => {
 
-    const [productos, setProductos] = useState([])
-    const [cargando, setCargando] = useState(true)
+export const ItemList = ({cargando, productos}) => {
 
-    useEffect(()=>{
-        const productos = ()=>{
-            return new Promise((resolve, reject)=>{
-                setTimeout(()=>{
-                    resolve(dataBase)
-                }, 2000)
-            })
-        }
-        productos().then((items)=>{
-            setProductos(items)
-            setCargando(false)
-        })
-    }, [])
-    //para se renderice una sola vez, le aplico un array vacío como segundo parámetro
 
     return (
         <div>
             {cargando ? <h2 className="bg-dark text-center text-danger p-4">SE ESTÁN CARGANDO LOS PRODUCTOS...</h2> :
             productos.map((producto)=> 
-            <Item key={producto.id} nombre={producto.nombre} desc={producto.desc} precio={producto.precio} stock={producto.stock} /> )}
+            <Item 
+            key={producto.id} 
+            nombre={producto.nombre} 
+            desc={producto.desc} 
+            precio={producto.precio} 
+            stock={producto.stock} /> )}
         </div>
     )
 }
