@@ -5,19 +5,20 @@
 import Header from "./components/Header/Header.js";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer.js";
 import { Footer } from "./components/Footer/Footer.js";
+// import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer.js";
 
 function App() {
 
   /** funciones, lógica, variables, etc **/
   const greeting = "Bienvenid@ a Ecommerce";
-  const slogan= "Donde nunca es tarde para encontrar lo que buscás";
+  const slogan = "Donde nunca es tarde para comprar un chocolate";
 
   return (
-    <div className="bg-light">
-      <Header/>
-      <ItemListContainer titulo={greeting} subtitulo={slogan}/>
-      <Footer />
-    </div>
+      <div className="bg-light">
+        <Header />
+        <ItemListContainer titulo={greeting} subtitulo={slogan} />
+        <Footer />
+      </div>
   );
 }
 

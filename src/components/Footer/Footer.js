@@ -15,10 +15,10 @@ export const Footer = () => {
                                 <li><a href="#" className="itemListaFooter">Productos</a></li>
                             </ul>
                             <div>
-                                <a href="#"><img src="" alt="Logo de instagram" /></a>
+                                <a href="#"><img className="iconosRedesSociales" src="./images/instagram.svg" alt="Logo de instagram" /></a>
                             </div>
                             <div>
-                                <a href="#"><img src="#" alt="logo de twitter" /></a>
+                                <a href="#"><img className="iconosRedesSociales" src="./images/twitter.svg" alt="logo de twitter" /></a>
                             </div>
                             <a href="#" className="logoNombre m-4 d-flex">
                                 <LogoIcono />

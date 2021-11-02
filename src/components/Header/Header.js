@@ -2,6 +2,7 @@
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
 import CardWidget from '../CartWidget/CardWidget'
 import { LogoIcono } from '../LogoIcono/LogoIcono'
+import { Link } from "react-router-dom"
 
 export const header = () => {
     return (
@@ -24,11 +25,9 @@ export const header = () => {
                                 <Nav.Link href="#features">Home</Nav.Link>
                                 <Nav.Link href="#pricing">Nosotros</Nav.Link>
                                 <NavDropdown title="Productos" id="collasible-nav-dropdown">
-                                    <NavDropdown.Item href="#action/3.1">Productos 1</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">Productos 2</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.3">Productos 3</NavDropdown.Item>
-                                    {/* <NavDropdown.Divider/> */}
-                                    {/* <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> */}
+                                    <NavDropdown.Item as={Link} to="/barra" href="#action/3.1">Cajas</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.2">Barras</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.3">Bombones</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
                             <Nav className="ms-auto">

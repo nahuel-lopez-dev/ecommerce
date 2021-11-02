@@ -13,7 +13,8 @@ export const ItemList = ({cargando, productos}) => {
             nombre={producto.nombre} 
             desc={producto.desc} 
             precio={producto.precio} 
-            stock={producto.stock} /> )}
+            stock={producto.stock}
+             /> )}
         </div>
     )
 }
