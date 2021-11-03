@@ -4,8 +4,8 @@ const Item = ({ nombre, desc, precio, stock }) => {
     return (
         <div className="container">
             <div className="row mt-3 justify-content-center">
-                <div className="col-4">
-                    <div class="card">
+                <div className="col-9 col-md-6 col-lg-5">
+                    <div className="card">
                         <img className="card-img-top" src="#" alt="" />
                         <div className="card-body text-center">
                             <h4>Componente ITEM</h4>
