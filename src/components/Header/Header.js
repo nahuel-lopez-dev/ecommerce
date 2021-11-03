@@ -25,9 +25,9 @@ export const header = () => {
                                 <Nav.Link href="#features">Home</Nav.Link>
                                 <Nav.Link href="#pricing">Nosotros</Nav.Link>
                                 <NavDropdown title="Productos" id="collasible-nav-dropdown">
-                                    <NavDropdown.Item as={Link} to="/barra" href="#action/3.1">Cajas</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">Barras</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.3">Bombones</NavDropdown.Item>
+                                    <NavDropdown.Item as={Link} to="/cajas" href="#action/3.1">Cajas</NavDropdown.Item>
+                                    <NavDropdown.Item as={Link} to="/barras" href="#action/3.2">Barras</NavDropdown.Item>
+                                    <NavDropdown.Item as={Link} to="/bombones" href="#action/3.3">Bombones</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
                             <Nav className="ms-auto">

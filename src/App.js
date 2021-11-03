@@ -5,6 +5,7 @@
 import Header from "./components/Header/Header.js";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer.js";
 import { Footer } from "./components/Footer/Footer.js";
+import {BrowserRouter, Switch, Route, Link} from "react-router-dom"
 // import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer.js";
 
 function App() {
@@ -14,11 +15,17 @@ function App() {
   const slogan = "Donde nunca es tarde para comprar un chocolate";
 
   return (
+    <BrowserRouter>
       <div className="bg-light">
         <Header />
-        <ItemListContainer titulo={greeting} subtitulo={slogan} />
+        <Switch>
+          <Route path="/">
+            <ItemListContainer titulo={greeting} subtitulo={slogan} />
+          </Route>
+        </Switch>
         <Footer />
       </div>
+    </BrowserRouter>  
   );
 }
 
