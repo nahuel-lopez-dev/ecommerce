@@ -34,12 +34,12 @@ export const ItemListContainer = ( { titulo, subtitulo } ) => {
 
     return (
         <div>
-            <h1 className="colorItemListContainer bg-gradient text-white text-center mt-5 p-4">{titulo}</h1>
+            <h1 className="colorItemListContainer bg-gradient text-white text-center mt-4 p-4">{titulo}</h1>
             <h2 className="text-secondary display-4 text-center m-2 p-2 rounded">{subtitulo}</h2>
             <div className="container d-flex justify-content-center">
                 <img className="img-fluid p-2 border rounded" src="./images/portada2.jpg" alt="Imagen de una chica comiendo una barra de chocolate" />
             </div>
-            <div className="d-grid col-auto ">
+            <div className="d-grid col-auto">
                 <ItemList cargando={cargando} productos={productos} />
             </div>
         </div>

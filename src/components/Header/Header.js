@@ -13,7 +13,7 @@ export const header = () => {
                         <LogoIcono />
                         <figure className="mt-3">
                             <blockquote className="blockquote">
-                                <Navbar.Brand href="#home" className="fs-1 logoNombre">Ecommerce</Navbar.Brand>
+                                <Navbar.Brand as={Link} to="/" href="#home" className="fs-1 logoNombre">Ecommerce</Navbar.Brand>
                             </blockquote>
                             <figcaption className="blockquote-footer">
                                 <cite title="Titulo de la fuente">Nunca es tarde para comprar</cite>

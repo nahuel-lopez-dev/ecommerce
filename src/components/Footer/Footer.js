@@ -1,5 +1,5 @@
-// import React from 'react' Ya no es necesario en las nuevas versiones
 import { LogoIcono } from '../LogoIcono/LogoIcono'
+import { Link } from "react-router-dom"
 import "./Footer.css"
 
 export const Footer = () => {
