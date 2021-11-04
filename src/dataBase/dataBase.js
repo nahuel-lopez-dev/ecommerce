@@ -6,7 +6,7 @@ const dataBase = [
         precio:'3000',
         categoria:'cajas',
         stock:'10',
-        imagen:'./images/caja.jpg'
+        imagen:'/images/caja.jpg'
     },
     {
         id:'2',
@@ -15,7 +15,7 @@ const dataBase = [
         precio:'3000',
         categoria:'cajas',
         stock:'10',
-        imagen:'./images/caja.jpg'
+        imagen:'/images/caja.jpg'
     },
     {
         id:'3',
@@ -24,7 +24,7 @@ const dataBase = [
         precio:'3000',
         categoria:'barras',
         stock:'8',
-        imagen:'./images/barra.jpg'
+        imagen:'/images/barra.jpg'
     },
     {
         id:'4',
@@ -33,7 +33,7 @@ const dataBase = [
         precio:'3000',
         categoria:'barras',
         stock:'8',
-        imagen:'./images/barra.jpg'
+        imagen:'/images/barra.jpg'
     },
     {
         id:'5',
@@ -42,7 +42,7 @@ const dataBase = [
         precio:'3000',
         categoria:'bombones',
         stock:'15',
-        imagen:'./images/bombones.jpeg'
+        imagen:'/images/bombones.jpeg'
     },
     {
         id:'6',
@@ -51,7 +51,7 @@ const dataBase = [
         precio:'3000',
         categoria:'bombones',
         stock:'15',
-        imagen:'./images/bombones.jpeg'
+        imagen:'/images/bombones.jpeg'
     },
     {
         id:'7',
@@ -60,7 +60,7 @@ const dataBase = [
         precio:'3000',
         categoria:'bombones',
         stock:'5',
-        imagen:'./images/bombones.jpeg'
+        imagen:'/images/bombones.jpeg'
     },
     {
         id:'8',
@@ -69,7 +69,7 @@ const dataBase = [
         precio:'3000',
         categoria:'bombones',
         stock:'5',
-        imagen:'./images/bombones.jpeg'
+        imagen:'/images/bombones.jpeg'
     },
 ]
 
