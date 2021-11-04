@@ -14,6 +14,8 @@ export const ItemList = ({cargando, productos}) => {
             desc={producto.desc} 
             precio={producto.precio} 
             stock={producto.stock}
+            categoria={producto.categoria}
+            id={producto.id}
              /> )}
         </div>
     )

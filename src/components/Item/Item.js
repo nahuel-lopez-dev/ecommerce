@@ -1,8 +1,10 @@
 import { ItemCount } from "../ItemCount/ItemCount"
+import { Link } from 'react-router-dom'
 
-const Item = ({ nombre, desc, precio, stock }) => {
+const Item = ({ nombre, desc, precio, stock, categoria, id }) => {
     return (
         <div className="container">
+            <Link to={`/${categoria}/${id}`}>
             <div className="row mt-3 justify-content-center">
                 <div className="col-9 col-md-6 col-lg-5">
                     <div className="card">
@@ -17,6 +19,7 @@ const Item = ({ nombre, desc, precio, stock }) => {
                     </div>
                 </div>
             </div>
+            </Link>
         </div>
     )
 }
