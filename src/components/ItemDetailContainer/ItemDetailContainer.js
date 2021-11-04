@@ -1,13 +1,15 @@
-// import React from 'react' ya no es necesario en las nuevas versiones
 import dataBase from "../../dataBase/dataBase"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import React, {useState, useEffect} from 'react'
+import {useParams} from 'react-router-dom'
 import "./ItemDetailContainer.css"
 
 export const ItemDetailContainer = ( ) => {
 
     const [producto, setProducto] = useState([])
     const [cargando, setCargando] = useState(true)
+
+    const {categoria, id} = useParams()
 
     useEffect(()=>{
         const productos = ()=>{
@@ -18,7 +20,7 @@ export const ItemDetailContainer = ( ) => {
             })
         }
         productos().then((items)=>{
-            const producto = items.find(producto => producto.id === "1")
+            const producto = items.find(producto => producto.id == id)
             setProducto(producto)
             setCargando(false)
         })

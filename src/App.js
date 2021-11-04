@@ -22,10 +22,10 @@ function App() {
           <Route path="/" exact>
             <ItemListContainer titulo={greeting} subtitulo={slogan} />
           </Route>
-          <Route path="/:categoria/:id" exact>
+          <Route path="/:categoria/" exact>
             <ItemListContainer titulo={greeting} subtitulo={slogan} />
           </Route>
-          <Route path="/item/:id">
+          <Route path="/:categoria/:id" exact>
             <ItemDetailContainer />
           </Route>
         </Switch>

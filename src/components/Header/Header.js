@@ -22,7 +22,7 @@ export const header = () => {
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="ms-lg-4 me-4 fs-4">
-                                <Nav.Link href="#features">Home</Nav.Link>
+                                <Nav.Link as={Link} to="/" href="#">Home</Nav.Link>
                                 <Nav.Link href="#pricing">Nosotros</Nav.Link>
                                 <NavDropdown title="Productos" id="collasible-nav-dropdown">
                                     <NavDropdown.Item as={Link} to="/cajas" href="#action/3.1">Cajas</NavDropdown.Item>
