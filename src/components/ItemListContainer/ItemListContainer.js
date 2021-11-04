@@ -2,7 +2,7 @@ import dataBase from "../../dataBase/dataBase"
 import { ItemList } from '../ItemList/ItemList';
 // import { ItemDetailContainer } from '../ItemDetailContainer/ItemDetailContainer';
 import React, {useState, useEffect} from 'react'
-// import {useParams} from 'react-router-dom'
+import {useParams} from 'react-router-dom'
 import "./ItemListContainer.css"
 
 export const ItemListContainer = ( { titulo, subtitulo } ) => {
@@ -11,9 +11,7 @@ export const ItemListContainer = ( { titulo, subtitulo } ) => {
     const [productos, setProductos] = useState([])
     const [cargando, setCargando] = useState(true)
 
-    // const {categoria, id} = useParams()
-    // console.log(categoria)
-    // console.log(id);
+    const {categoria} = useParams()
 
     useEffect(()=>{
         const productos = ()=>{
@@ -24,11 +22,16 @@ export const ItemListContainer = ( { titulo, subtitulo } ) => {
             })
         }
         productos().then((items)=>{
-            setProductos(items)
-            setCargando(false)
+            if(categoria != null){
+                const productosFiltrados = items.filter((producto) => producto.categoria === categoria)
+                setProductos(productosFiltrados)
+                setCargando(false)
+            } else {
+                setProductos(items)
+                setCargando(false)
+            }
         })
-    }, [])
-    //para se renderice una sola vez, le aplico un array vacío como segundo parámetro
+    }, [categoria])
 
     return (
         <div>

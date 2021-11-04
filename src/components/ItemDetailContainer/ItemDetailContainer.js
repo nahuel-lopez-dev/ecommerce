@@ -9,7 +9,7 @@ export const ItemDetailContainer = ( ) => {
     const [producto, setProducto] = useState([])
     const [cargando, setCargando] = useState(true)
 
-    const {categoria, id} = useParams()
+    const {id} = useParams()
 
     useEffect(()=>{
         const productos = ()=>{
