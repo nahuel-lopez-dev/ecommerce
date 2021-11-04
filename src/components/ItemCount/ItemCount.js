@@ -27,7 +27,6 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
 
     return (
         <div>
-            <h3 className="text-dark m-3 p-3 fs-3 text-center">ItemCount</h3>
             <p className="text-dark m-1 p-1 fs-3 text-center">Stock disponible: {cantidad}</p>
             <div className="text-center d-flex align-items-center justify-content-center">
                 <button className="btn btn-danger btn-lg m-3 p-2" onClick={handleSubtract} disabled={stock === 0}> -1 </button>

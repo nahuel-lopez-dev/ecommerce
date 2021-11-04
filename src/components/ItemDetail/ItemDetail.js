@@ -8,7 +8,6 @@ const ItemDetail = ({nombre, desc, precio, stock, imagen}) => {
                     <div className="card">
                         <img className="card-img-top" src="#" alt="" />
                         <div className="card-body text-center">
-                            <h4>Componente ItemDetail</h4>
                             <h4 className="card-title">{nombre}</h4>
                             <p className="card-text">{desc}</p>
                             <h5 className="card-subtitle text-muted mb-2">$ {precio}</h5>

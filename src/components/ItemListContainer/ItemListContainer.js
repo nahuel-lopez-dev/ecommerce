@@ -1,6 +1,5 @@
 import dataBase from "../../dataBase/dataBase"
 import { ItemList } from '../ItemList/ItemList';
-// import { ItemDetailContainer } from '../ItemDetailContainer/ItemDetailContainer';
 import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import "./ItemListContainer.css"
@@ -40,8 +39,9 @@ export const ItemListContainer = ( { titulo, subtitulo } ) => {
             <div className="container d-flex justify-content-center">
                 <img className="img-fluid p-2 border rounded" src="./images/portada2.jpg" alt="Imagen de una chica comiendo una barra de chocolate" />
             </div>
-            <ItemList cargando={cargando} productos={productos} />
-            {/* <ItemDetailContainer /> */}
+            <div className="d-grid col-auto ">
+                <ItemList cargando={cargando} productos={productos} />
+            </div>
         </div>
     )
 }
