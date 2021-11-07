@@ -1,13 +1,12 @@
 import Item from "../Item/Item"
 
 
-export const ItemList = ({cargando, productos}) => {
+export const ItemList = ({items}) => {
 
 
     return (
         <div>
-            {cargando ? <h2 className="bg-dark text-center text-danger p-4">SE ESTÁN CARGANDO LOS PRODUCTOS...</h2> :
-            productos.map((producto)=> 
+            {items.map((producto)=> 
             <Item 
             key={producto.id} 
             nombre={producto.nombre} 

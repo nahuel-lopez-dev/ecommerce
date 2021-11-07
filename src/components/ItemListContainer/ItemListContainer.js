@@ -39,9 +39,14 @@ export const ItemListContainer = ( { titulo, subtitulo } ) => {
             <div className="container d-flex justify-content-center">
                 <img className="img-fluid p-2 border rounded" src="./images/portada2.jpg" alt="Imagen de una chica comiendo una barra de chocolate" />
             </div>
-            <div className="d-grid col-auto">
-                <ItemList cargando={cargando} productos={productos} />
-            </div>
+            {/* Si está cargando los productos muestro el mensaje, sino llamo a ItemList con productos */}
+            {cargando ? 
+                <h2 className="bg-dark text-center text-danger p-4">SE ESTÁN CARGANDO LOS PRODUCTOS...</h2> 
+                :
+                <div className="d-grid col-auto">
+                    <ItemList items={productos} />
+                </div>
+            }
         </div>
     )
 }

@@ -23,14 +23,14 @@ function App() {
           <Route path="/" exact>
             <ItemListContainer titulo={greeting} subtitulo={slogan} />
           </Route>
+          <Route path="/cart" exact>
+            <Cart/>
+          </Route>
           <Route path="/:categoria/" exact>
             <ItemListContainer titulo={greeting} subtitulo={slogan} />
           </Route>
           <Route path="/:categoria/:id" exact>
             <ItemDetailContainer />
-          </Route>
-          <Route path="/cart" exact>
-            <Cart/>
           </Route>
         </Switch>
         <Footer />
