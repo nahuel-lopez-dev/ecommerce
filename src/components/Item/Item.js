@@ -1,10 +1,10 @@
 // import { ItemCount } from "../ItemCount/ItemCount"
 import { Link } from 'react-router-dom'
 
-const Item = ({ nombre, desc, precio, stock, categoria, id, imagen }) => {
+const Item = ({ nombre, desc, precio, categoria, id, imagen }) => {
     return (
         <div className="container">
-            <div className="row mt-3 justify-content-center">
+            <div className="row mt-3 justify-content-center d-flex">
                 <div className="col-9 col-md-6 col-lg-5">
                     <div className="card">
                         <img className="card-img-top" src="#" alt="" />
