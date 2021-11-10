@@ -1,57 +1,51 @@
-import React, {useState} from 'react'
-import { Link } from 'react-router-dom';
-import "./ItemCount.css"
+import { useState } from "react"
+import { Button, Card } from 'react-bootstrap'
 
-export const ItemCount = ({ stock, initial, onAdd }) => {
+const ItemCount = ({ stock, initial, onAdd }) => {
 
-    const [ cantidad, setCantidad] = useState( stock );
-    const [ counter, setCounter ] = useState( initial );
-    const [cambiarBoton, setCambiarBoton] = useState(true)
+  const [stockItem, setStockItem] = useState(stock)
+  const [cantidad, setCantidad] = useState(initial)
 
-    //Para agregar productos. Tiena la condición de sumar, y en el button donde se aplica lo acompaña la propiedad disabled para el stock = 0. De este modo, mientras el contador sea menor que el stock, permite sumar. Si alcanza el mismo valor que el stock, ya no permite sumar.
-    const handleAdd = () => {
-        if(cantidad > 0)
-            setCounter(counter +1)
-            setCantidad(cantidad -1)
-    } 
-    //Para sacar productos. Tiene la condición de restar mientras el contador sea mayor a cero. Si llega a ser igual a cero, ya no permite restar
-    const handleSubtract = () => {
-        if(counter > 0){
-            setCounter(counter -1)
-            setCantidad(cantidad +1)
-        }
-    } 
-    //Para generar un alert de la cantidad de unidades que se agregarán al carrito.
-    const addProducts = () => {
-        if(counter !== 0){
-            onAdd(counter)
-            setCambiarBoton(false)
-            alert(`Se agregarán: ${counter} unidades a su carrito`)
-        }
+  const changeStock = {
+    handleAdd: () => {
+      if (stockItem === 0) {
+        alert("No hay más stock.")
+      } else {
+        setCantidad(cantidad + 1)
+        setStockItem(stockItem - 1)
+      }
+    },
+    handleSubtract: () => {
+      if (cantidad > 0) {
+          setCantidad(cantidad - 1)
+          setStockItem(stockItem + 1)
+      }
     }
+  }
 
-    return (
-        <div>
-            <p className="text-dark m-1 p-1 fs-3 text-center">Stock disponible: {cantidad}</p>
-            <div className="text-center d-flex align-items-center justify-content-center">
-                <button className="btn btn-danger btn-lg m-3 p-2" onClick={handleSubtract} disabled={stock === 0}> -1 </button>
-                <h3 className="m-3">{ counter }</h3>
-                <button className="btn btn-danger btn-lg m-3 p-2" onClick={handleAdd} disabled={cantidad === 0}>+1</button>
-            </div>
-            <div className="text-center">
-                { cambiarBoton ?
-                    <button className="btn btn-dark btn-lg mb-4 p-2" onClick={addProducts}>Agregar al carrito</button>
-                    :
-                    <div>
-                        <Link to={'/cart'}>
-                            <button className="btn btn-dark btn-md mb-4 m-1 p-1" >Terminar Compra</button> 
-                        </Link>
-                        <Link to={'/'}>
-                            <button className="btn btn-dark btn-md mb-4 m-1 p-1" >Seguir comprando</button> 
-                        </Link>
-                    </div>
-                }
-            </div>
+  return (
+    <div className="container">
+      <div className="container justify-content-center display-flex col-12 p-2">
+
+        <div className="container d-flex justify-content-center">
+          <Card.Text className="text-muted">Stock disponible: {stockItem}</Card.Text>
         </div>
-    )
+
+        <div className="container d-flex justify-content-between col-4 p-2">
+          <button className="btn btn-danger bg-gradient" onClick={changeStock.handleSubtract} disabled={stockItem === 0 && cantidad === 0}>-</button>
+          <h5>{cantidad}</h5>
+          <button className="btn btn-danger bg-gradient" onClick={changeStock.handleAdd} disabled={stockItem === 0 && cantidad === 0}>+</button>
+        </div>
+
+        <div className="container d-flex justify-content-center">
+          <Button className="col-4" variant="dark bg-gradient" onClick={() => {onAdd({cantidad}) }} disabled={cantidad === 0}>
+            Agregar al carrito
+          </Button>
+        </div>
+
+      </div>
+    </div>
+  )
 }
+
+export default ItemCount

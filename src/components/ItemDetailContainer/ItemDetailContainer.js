@@ -1,10 +1,10 @@
+import "./ItemDetailContainer.css"
 import dataBase from "../../dataBase/dataBase"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
-import "./ItemDetailContainer.css"
 
-export const ItemDetailContainer = ( ) => {
+const ItemDetailContainer = ( ) => {
 
     const [producto, setProducto] = useState([])
     const [cargando, setCargando] = useState(true)
@@ -24,8 +24,7 @@ export const ItemDetailContainer = ( ) => {
             setProducto(producto)
             setCargando(false)
         })
-    }, [])
-    //para se renderice una sola vez, le aplico un array vacío como segundo parámetro
+    }, [id])
 
     return (
         <>
@@ -41,3 +40,5 @@ export const ItemDetailContainer = ( ) => {
         </>
     )
 }
+
+export default ItemDetailContainer

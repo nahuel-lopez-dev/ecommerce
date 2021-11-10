@@ -1,33 +1,42 @@
-import { ItemCount } from "../ItemCount/ItemCount"
-import { useState } from 'react'
+import { useState, useContext } from "react"
+import { Link } from "react-router-dom"
+import ItemCount from "../ItemCount/ItemCount"
+import { Context } from "../Context/CartContext"
+import { Container, Card, Button } from "react-bootstrap"
 
-const ItemDetail = ({nombre, desc, precio, stock, imagen}) => {
+const ItemDetail = ({ id, nombre, desc, precio, stock, imagen }) => {
 
-    const [cantidadSeleccionada, setCantidadSeleccionada] = useState(0)
+  const [add, setAdd] = useState(false)
+  const { onAdd } = useContext(Context)
 
-    const onAdd=(cantidad)=>{
-        console.log(cantidad);
-        setCantidadSeleccionada(cantidad)
-    }
+  const addToCart = (props) => {
+    setAdd(true)
+    onAdd({ id, nombre, precio, imagen }, props.cantidad) //producto, cantidad
+    console.log(`Se agregaron ${props.cantidad} unidades del producto ${nombre} al carrito`)
+  }
 
-    return (
-        <div className="container">
-            <div className="row mt-3 justify-content-center">
-                <div className="col-9 col-md-6 col-lg-5">
-                    <div className="card">
-                        <img className="card-img-top" src="#" alt="" />
-                        <div className="card-body text-center">
-                            <h4 className="card-title">{nombre}</h4>
-                            <p className="card-text">{desc}</p>
-                            <h5 className="card-subtitle text-muted mb-2">$ {precio}</h5>
-                            <img className="justify-content-center p-1 img-fluid" src={imagen} alt={nombre} />
-                            <ItemCount stock={stock} initial={0} onAdd={onAdd} />
-                        </div>    
-                    </div>
-                </div>
+  return (
+    <Container className="col-12 col-md-12 col-lg-12 d-flex justify-content-center my-3">
+      <Card className="card p-3 bg-light rounded-3">
+        <Card.Img className="rounded-3" variant="top" src={imagen} alt={nombre} style={{ width: "100%" }} />
+        <Card.Body>
+          <Card.Title className="fs-1 text-center">{nombre}</Card.Title>
+          <Card.Text className="text-center">{desc}</Card.Text>
+          <Card.Subtitle className="p-2" style={{ textAlign: "center" }}><strong className="fs-3">$ {precio}</strong></Card.Subtitle>
+
+          {!add ?
+            <ItemCount onAdd={addToCart} stock={stock} initial={0} />
+            :
+            <div className="container d-flex justify-content-center">
+              <Button as={Link} to='/cart' className="col-4" variant="dark bg-gradient">Terminar compra</Button>
             </div>
-        </div>
-    )
+          }
+
+          <Button as={Link} to={'/'} variant="danger bg-gradient">Volver</Button>
+        </Card.Body>
+      </Card>
+    </Container >
+  )
 }
 
 export default ItemDetail

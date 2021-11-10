@@ -4,7 +4,7 @@ import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import "./ItemListContainer.css"
 
-export const ItemListContainer = ( { titulo, subtitulo } ) => {
+const ItemListContainer = ( { titulo, subtitulo } ) => {
 
 
     const [productos, setProductos] = useState([])
@@ -50,3 +50,5 @@ export const ItemListContainer = ( { titulo, subtitulo } ) => {
         </div>
     )
 }
+
+export default ItemListContainer

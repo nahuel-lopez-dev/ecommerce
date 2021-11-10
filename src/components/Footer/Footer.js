@@ -2,7 +2,7 @@ import { LogoIcono } from '../LogoIcono/LogoIcono'
 import { Link } from "react-router-dom"
 import "./Footer.css"
 
-export const Footer = () => {
+const Footer = () => {
     return (
         <div>
             <div className="container-fluid bg-light border-top footer mt-4">
@@ -15,10 +15,10 @@ export const Footer = () => {
                                 <li><a href="#" className="itemListaFooter">Productos</a></li>
                             </ul>
                             <div>
-                                <a href="#"><img className="iconosRedesSociales" src="./images/instagram.svg" alt="Logo de instagram" /></a>
+                                <a href="#"><img className="iconosRedesSociales" src="/images/instagram.svg" alt="Logo de instagram" /></a>
                             </div>
                             <div>
-                                <a href="#"><img className="iconosRedesSociales" src="./images/twitter.svg" alt="logo de twitter" /></a>
+                                <a href="#"><img className="iconosRedesSociales" src="/images/twitter.svg" alt="logo de twitter" /></a>
                             </div>
                             <a href="#" className="logoNombre m-4 d-flex">
                                 <LogoIcono />
@@ -31,3 +31,5 @@ export const Footer = () => {
         </div>
     )
 }
+
+export default Footer

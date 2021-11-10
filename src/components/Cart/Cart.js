@@ -1,7 +1,54 @@
-export const Cart = () => {
-    return (
-        <div className="m-5">
-            <h2 className="bg-dark text-white text-center p-3 mt-4">Voy a ser el carrito de compras</h2>
-        </div>
-    )
+import "./Cart.css"
+import { Context } from "../Context/CartContext"
+import { useContext } from "react"
+import { Container, Button } from "react-bootstrap"
+import CartItem from "../CartItem/CartItem"
+import { Link } from "react-router-dom"
+
+const Cart = () => {
+
+  const { cart, total, clear } = useContext(Context)
+
+  return (
+    <div className="cart">
+        <h2 className="fs-1 p-4 bg-dark text-white text-center">Carrito de compras</h2>
+      <Container className="container align-top justify-content-center p-2 text-center ">
+
+        <Container>
+          {/* Si hay productos en el carrito, los muestra.*/}
+          {cart.length > 0 ? (
+            <>
+              {cart.map((producto) =>
+                <CartItem
+                  key={`cart-${producto.id}`}
+                  id={producto.id}
+                  nombre={producto.nombre}
+                  precio={producto.precio}
+                  imagen={producto.imagen}
+                  cantidad={producto.cantidad}
+                  subtotal={producto.subtotal}
+                />
+              )}
+
+              <h2>Total del carrito: ${total}</h2>
+              <Container>
+                <Button variant="danger bg-gradient m-2" onClick={() => clear()}>Vaciar carrito</Button>
+                <Button variant="dark bg-gradient m-2">Finalizar Compra</Button>
+              </Container>
+            </>
+          )
+            :
+            (
+              <>
+                <p className="display-4">Tu carrito está vacío =(</p>
+                <Button variant="danger bg-gradient" as={Link} to='/'>Volver a inicio</Button>
+              </>
+            )
+          }
+        </Container>
+      </Container>
+    </div>
+  )
 }
+
+export default Cart
