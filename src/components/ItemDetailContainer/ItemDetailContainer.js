@@ -25,7 +25,6 @@ const ItemDetailContainer = ( ) => {
             setCargando(false)
         })
     }, [id])
-    //para se renderice una sola vez, le aplico un array vacío como segundo parámetro
 
     return (
         <>

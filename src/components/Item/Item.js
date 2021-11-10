@@ -1,4 +1,3 @@
-// import { ItemCount } from "../ItemCount/ItemCount"
 import { Link } from 'react-router-dom'
 
 const Item = ({id, nombre, desc, precio, categoria, imagen }) => {
@@ -7,7 +6,6 @@ const Item = ({id, nombre, desc, precio, categoria, imagen }) => {
             <div className="row mt-3 justify-content-center d-flex">
                 <div className="col-9 col-md-6 col-lg-5">
                     <div className="card" key={id}>
-                        <img className="card-img-top" src="#" alt="" />
                         <div className="card-body text-center">
                             <h4 className="card-title">{nombre}</h4>
                             <p className="card-text">{desc}</p>

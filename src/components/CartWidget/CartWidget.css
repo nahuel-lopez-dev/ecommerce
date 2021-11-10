@@ -1,24 +1,17 @@
-/* .cart_widget {
-    color: blue; 
-    justify-content:space-between;
-    display:inline;
-  } */
+.navCart {
+  background-color: #dd2417;
+  border-radius: 50%;
+  color: white;
+  width: 21px;
+  height: 21px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  top: -8px;
+  left: -5px;
+}
   
-  .cantidadCarrito {
-      background-color: #F44336;
-      color: white;
-      border-radius: 50%;
-      width: 20px;
-      height: 20px;
-      display: inline-block;
-      position: relative;
-      text-align: center;
-      text-decoration: none;
-      /* top: 8px;
-      left: -5px; */
-  }
-  
-  /* .cantidadCarrito h4 {
-    font-size: 50px !important;
-    line-height: 19px;
-  } */
+.navCart h4 {
+  font-size: 1rem;
+  line-height: 19px;
+}
