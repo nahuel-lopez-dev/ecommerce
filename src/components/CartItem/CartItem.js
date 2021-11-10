@@ -8,11 +8,11 @@ const CartItem = ({ id, nombre, precio, imagen, cantidad, subtotal }) => {
   const { remove } = useContext(Context)
 
   return (
-    <Container className="">
+    <Container className="mb-4">
       <Card className="" style={{ width: '100%' }}>
         <Row className='no-gutters'>
           <Col className="col-sm">
-            <Card.Img className="rounded-3" variant="top" src={imagen} alt={nombre} style={{ width: "100%" }} />
+            <Card.Img className="rounded" variant="top" src={imagen} alt={nombre} style={{ width: "100%" }} />
           </Col>
           <Col className="col-lg">
             <Card.Body>

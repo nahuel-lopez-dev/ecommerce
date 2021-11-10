@@ -25,12 +25,14 @@ const ItemDetailContainer = ( ) => {
             setCargando(false)
         })
     }, [id])
+    //para se renderice una sola vez, le aplico un array vacío como segundo parámetro
 
     return (
         <>
             {cargando ? <h2 className="bg-dark text-center text-danger p-4">SE ESTÁ CARGANDO EL PRODUCTO</h2> : 
             <ItemDetail 
-                key={producto.id} 
+                key={`detail-${producto.id}`}
+                id={producto.id} 
                 nombre={producto.nombre} 
                 desc={producto.desc} 
                 precio={producto.precio} 

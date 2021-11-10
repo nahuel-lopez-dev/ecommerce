@@ -30,7 +30,7 @@ const Cart = () => {
                 />
               )}
 
-              <h2>Total del carrito: ${total}</h2>
+              <h2 className="display-5">Total del carrito: ${total}</h2>
               <Container>
                 <Button variant="danger bg-gradient m-2" onClick={() => clear()}>Vaciar carrito</Button>
                 <Button variant="dark bg-gradient m-2">Finalizar Compra</Button>

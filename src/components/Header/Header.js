@@ -1,10 +1,9 @@
-// import React from 'react' ya no es necesario en las nuevas versiones
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
-import CardWidget from '../CartWidget/CardWidget'
+import CartWidget from '../CartWidget/CartWidget'
 import { LogoIcono } from '../LogoIcono/LogoIcono'
 import { Link } from "react-router-dom"
 
-export const header = () => {
+export const header = ({cantidadItems}) => {
     return (
         <div>
             <header>
@@ -33,7 +32,7 @@ export const header = () => {
                             <Nav className="ms-auto">
                                 <Nav.Link href="#deets" className="mt-md-3">Crear cuenta</Nav.Link>
                                 <Nav.Link eventKey={2} href="#memes" className="mt-md-3">Iniciar sesión</Nav.Link>
-                                <CardWidget text=" Carrito 6" />
+                                <CartWidget cantidad={cantidadItems} />
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
