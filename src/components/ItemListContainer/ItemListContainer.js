@@ -43,8 +43,10 @@ const ItemListContainer = ( { titulo, subtitulo } ) => {
             {cargando ? 
                 <h2 className="bg-dark text-center text-danger p-4">SE ESTÁN CARGANDO LOS PRODUCTOS...</h2> 
                 :
-                <div className="d-grid col-auto">
-                    <ItemList items={productos} />
+                <div className="container-fluid">
+                    <div className="row">
+                        <ItemList items={productos} />
+                    </div>
                 </div>
             }
         </div>
