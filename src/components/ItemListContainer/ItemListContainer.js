@@ -1,8 +1,9 @@
-import dataBase from "../../dataBase/dataBase"
+// import dataBase from "../../dataBase/dataBase"
 import { ItemList } from '../ItemList/ItemList';
 import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import "./ItemListContainer.css"
+import { getFirestore } from "../../Firebase/firebase";
 
 const ItemListContainer = ( { titulo, subtitulo } ) => {
 
@@ -13,24 +14,44 @@ const ItemListContainer = ( { titulo, subtitulo } ) => {
     const {categoria} = useParams()
 
     useEffect(()=>{
-        const productos = ()=>{
-            return new Promise((resolve, reject)=>{
-                setTimeout(()=>{
-                    resolve(dataBase)
-                }, 2000)
+        if(categoria){
+            const dbQuery = getFirestore()
+            dbQuery.collection('items').where('categoria', '==', categoria).get()
+            .then(resp => {
+                setProductos(resp.docs.map(productos => ( {id: productos.id, ... productos.data() } ) ))
             })
+            .catch(err => console.log(err))
+            .finally(()=>setCargando(false))
+        } else {
+            const dbQuery = getFirestore()
+            dbQuery.collection('items').get()
+            .then(resp => {
+                setProductos(resp.docs.map(productos => ( {id: productos.id, ... productos.data() } ) ))
+            })
+            .catch(err => console.log(err))
+            .finally(()=>setCargando(false))
         }
-        productos().then((items)=>{
-            if(categoria != null){
-                const productosFiltrados = items.filter((producto) => producto.categoria === categoria)
-                setProductos(productosFiltrados)
-                setCargando(false)
-            } else {
-                setProductos(items)
-                setCargando(false)
-            }
-        })
+
+        // const productos = ()=>{
+        //     return new Promise((resolve, reject)=>{
+        //         setTimeout(()=>{
+        //             resolve(dataBase)
+        //         }, 2000)
+        //     })
+        // }
+        // productos().then((items)=>{
+        //     if(categoria != null){
+        //         const productosFiltrados = items.filter((producto) => producto.categoria === categoria)
+        //         setProductos(productosFiltrados)
+        //         setCargando(false)
+        //     } else {
+        //         setProductos(items)
+        //         setCargando(false)
+        //     }
+        // })
     }, [categoria])
+
+    console.log(productos);
 
     return (
         <div>
