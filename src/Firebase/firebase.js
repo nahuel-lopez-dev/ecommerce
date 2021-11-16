@@ -1,6 +1,5 @@
 import firebase from 'firebase'
 import 'firebase/firestore'
-// import { collection, getDocs, where, query, getDoc } from 'firebase/firestore'
 
 const firebaseConfig = {
     apiKey: "AIzaSyB_o5ipc8kaHwzx1YCiQoj07og_QPN6xPE",
