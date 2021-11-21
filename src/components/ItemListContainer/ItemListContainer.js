@@ -18,7 +18,7 @@ const ItemListContainer = ( { titulo, subtitulo } ) => {
             const dbQuery = getFirestore()
             dbQuery.collection('items').where('categoria', '==', categoria).get()
             .then(resp => {
-                setProductos(resp.docs.map(productos => ( {id: productos.id, ... productos.data() } ) ))
+                setProductos(resp.docs.map(productos => ( {id: productos.id, ...productos.data() } ) ))
             })
             .catch(err => console.log(err))
             .finally(()=>setCargando(false))
@@ -26,32 +26,12 @@ const ItemListContainer = ( { titulo, subtitulo } ) => {
             const dbQuery = getFirestore()
             dbQuery.collection('items').get()
             .then(resp => {
-                setProductos(resp.docs.map(productos => ( {id: productos.id, ... productos.data() } ) ))
+                setProductos(resp.docs.map(productos => ( {id: productos.id, ...productos.data() } ) ))
             })
             .catch(err => console.log(err))
             .finally(()=>setCargando(false))
         }
-
-        // const productos = ()=>{
-        //     return new Promise((resolve, reject)=>{
-        //         setTimeout(()=>{
-        //             resolve(dataBase)
-        //         }, 2000)
-        //     })
-        // }
-        // productos().then((items)=>{
-        //     if(categoria != null){
-        //         const productosFiltrados = items.filter((producto) => producto.categoria === categoria)
-        //         setProductos(productosFiltrados)
-        //         setCargando(false)
-        //     } else {
-        //         setProductos(items)
-        //         setCargando(false)
-        //     }
-        // })
     }, [categoria])
-
-    console.log(productos);
 
     return (
         <div>

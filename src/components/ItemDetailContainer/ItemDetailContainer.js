@@ -28,20 +28,7 @@ const ItemDetailContainer = ( ) => {
 			alert('El producto no existe')
 		}).finally(() => {
 			setCargando(false)
-		})
-
-        // const productos = ()=>{
-        //     return new Promise((resolve, reject)=>{
-        //         setTimeout(()=>{
-        //             resolve(dataBase)
-        //         }, 2000)
-        //     })
-        // }
-        // productos().then((items)=>{
-        //     const producto = items.find(producto => producto.id == id)
-        //     setProducto(producto)
-        //     setCargando(false)
-        // })
+		})        
     }, [id])
 
     return (
