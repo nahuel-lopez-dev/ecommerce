@@ -35,8 +35,8 @@ const Cart = () => {
     orden.date = firebase.firestore.Timestamp.fromDate(new Date());
 
     orden.buyer = formData
-    //total no es una función... revisaaaarrrrrr
-    // orden.total = total();
+    
+    orden.total = total;
 
     orden.items = cart.map(cart => {
       const id = cart.id;
