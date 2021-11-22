@@ -12,7 +12,6 @@ const ItemDetail = ({ id, nombre, desc, precio, stock, imagen }) => {
   const addToCart = (props) => {
     setAdd(true)
     onAdd({ id, nombre, precio, imagen }, props.cantidad) //producto, cantidad
-    console.log(`Se agregaron ${props.cantidad} unidades del producto ${nombre} al carrito`)
   }
 
   return (

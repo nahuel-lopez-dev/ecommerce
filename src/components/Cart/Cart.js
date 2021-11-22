@@ -10,14 +10,14 @@ import firebase from 'firebase'
 import 'firebase/firestore'
 
 const Cart = () => {
-
+  
+  const { cart, total, clear } = useContext(Context)
+  
   const [formData, setFormData] = useState({
     nombre: '',
     tel: '',
     email: ''
   })
-
-  const { cart, total, clear } = useContext(Context)
 
   function handleOnChange(e){
 
@@ -48,7 +48,7 @@ const Cart = () => {
 
     const db = getFirestore();
     db.collection('orders').add(orden)
-    .then(resp => console.log(resp.id) )
+    .then(resp => alert(`Su código de compra es: ${resp.id}`) )
     .catch(err => console.log(err))
     .finally(()=> setFormData({
       name: '',
@@ -56,8 +56,6 @@ const Cart = () => {
       email: ''
     }))
   }
-
-  console.log(formData);
 
   return (
     <div className="cart">
@@ -87,17 +85,15 @@ const Cart = () => {
                   <form onChange={handleOnChange} onSubmit={handleOnSubmit} action="">
                     <Container className="d-flex justify-content-center mt-2">
                       <div className="col-12 col-md-10 col-lg-6 bg-dark p-2 rounded">
-                        {/* <label htmlFor="nombre"></label> */}
+                        <h4 className="text-white">Estos datos son necesarios para poder terminar su compra</h4>
+                        <label htmlFor="nombre"></label>
                         <input name="nombre" className="form-control" type="text" placeholder="Nombre" defaultValue={formData.nombre} required/>
 
-                        {/* <label htmlFor="tel"></label> */}
+                        <label htmlFor="tel"></label>
                         <input type="tel" name="tel" className="form-control" placeholder="Ingrese su teléfono" defaultValue={formData.tel} />
 
-                        {/* <label htmlFor="email"></label> */}
-                        <input name="email" className="form-control" type="email" placeholder="Ingrese su email" defaultValue={formData.email} required />  
-                      
-                        {/* <label htmlFor="emailConf"></label> */}
-                        <input name="emailConf" className="form-control" type="email" placeholder="Confirme su email" required />  
+                        <label htmlFor="email"></label>
+                        <input name="email" className="form-control" type="email" placeholder="Ingrese su email" defaultValue={formData.email} required />    
                       </div>
                     </Container>
                     <Container>
