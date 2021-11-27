@@ -1,4 +1,3 @@
-// import dataBase from "../../dataBase/dataBase"
 import { ItemList } from '../ItemList/ItemList';
 import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
@@ -45,7 +44,7 @@ const ItemListContainer = ( { titulo, subtitulo } ) => {
                 <h2 className="bg-dark text-center text-danger p-4">SE ESTÁN CARGANDO LOS PRODUCTOS...</h2> 
                 :
                 <div className="container-fluid">
-                    <div className="row">
+                    <div className="row bg-gradient p-3 galeria">
                         <ItemList items={productos} />
                     </div>
                 </div>

@@ -1,3 +1,13 @@
 .colorItemListContainer{
     background-color: #00538c;
 }
+
+.galeria{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    background-color: #00538c;
+}

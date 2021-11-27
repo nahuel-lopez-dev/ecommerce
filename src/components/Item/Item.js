@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom'
 
 const Item = ({id, nombre, desc, precio, categoria, imagen }) => {
     return (
-        <div className="container">
+        <div className="container-fluid">
             <div className="row mt-3 justify-content-center d-flex">
-                <div className="col-9 col-md-6 col-lg-5">
+                <div className="col-12 col-md-6 col-lg-5">
                     <div className="card" key={id}>
                         <div className="card-body text-center">
                             <h4 className="card-title">{nombre}</h4>

@@ -1,5 +1,3 @@
-// import dataBase from "../../dataBase/dataBase"
-import "./ItemDetailContainer.css"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
