@@ -1,12 +1,11 @@
 import "./Cart.css"
-import { Context } from "../Context/CartContext"
-import { useContext } from "react"
-import { Container, Button } from "react-bootstrap"
-import { Link } from "react-router-dom"
 import CartItem from "../CartItem/CartItem"
 import FormBuyer from "../FormBuyer/FormBuyer"
+import { Context } from "../Context/CartContext"
+import { useContext } from "react"
 import { useState } from "react"
-import 'firebase/firestore'
+import { Container, Button } from "react-bootstrap"
+import { Link } from "react-router-dom"
 import { getFirestore } from "../../Firebase/firebase"
 import firebase from 'firebase'
 import 'firebase/firestore'
