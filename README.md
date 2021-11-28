@@ -7,7 +7,7 @@
 
 # *Información del proyecto:*
 
-Este es mi proyecto final, para el curso de ReactJS en [CoderHouse](https://www.coderhouse.com), que forma parte de la carrera de desarrollador web full stack.  
+Este es mi proyecto final, para el curso de React.js en [CoderHouse](https://www.coderhouse.com), que forma parte de la carrera de desarrollador web full stack.  
 Consiste en un ecommerce implementado con React.js junto React Router, React Hooks, Librería de Bootstrap y Firebase.
 
 ## *Version 1.0.0:*
@@ -31,23 +31,23 @@ Consiste en un ecommerce implementado con React.js junto React Router, React Hoo
 **Sobre el flujo de compra:**
 
 ### 1. Home:
-<!-- ## ![](src/images/nombreImagen) -->
+## ![](src/images/flujo-compra/home)
 
 ### 2. Detalle del producto seleccionado:
 
-<!-- ## ![](src/images/nombreImagen) -->
+## ![](src/images/flujo-compra/detalle-producto)
 
 ### 3. Carrito de compras, con productos seleccionados:
 
-<!-- ## ![] (src/images/nombreImagen) -->
+## ![](src/images/flujo-compra/carrito-compra)
 
 ### 4. Fin de la compra:
 
-<!-- ## ![] (src/images/nombreImagen) -->
+## ![](src/images/flujo-compra/carrito-compra-final-mensaje)
 
 ### Si no hay productos en el carrito:
 
-<!-- ## ![] (src/images/nombreImagen) -->
+## ![](src/images/flujo-compra/carrito-vacio)
 # *Flujo de Compra*
   
 Para poder comprar uno o más productos, se debe seleccionar desde el Home, en la galería de productos, "ver detalle" A partir de ahí, se debe seleccionar la cantidad del producto para añadirlo al carrito. Para que se habilite el botón de agregar al carrito, debe haber al menos un producto seleccionado. No se permite restar unidades inferiores a cero ni tampoco superar el stock disponible.
