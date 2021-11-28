@@ -14,10 +14,10 @@ const Footer = () => {
                                 <li><a href="#" className="itemListaFooter">Productos</a></li>
                             </ul>
                             <div>
-                                <a href="#"><img className="iconosRedesSociales" src="/images/instagram.svg" alt="Logo de instagram" /></a>
+                                <a href="https://github.com/Nahuel-DevOne/" target="_blank"><img className="iconosRedesSociales" src="/images/github.svg" alt="Logo de github" /></a>
                             </div>
                             <div>
-                                <a href="#"><img className="iconosRedesSociales" src="/images/twitter.svg" alt="logo de twitter" /></a>
+                                <a href="https://www.linkedin.com/in/nahuel-developer/" target="_blank"><img className="iconosRedesSociales" src="/images/linkedin.svg" alt="logo de Linkedin" /></a>
                             </div>
                             <a href="#" className="logoNombre m-4 d-flex">
                                 <LogoIcono />
