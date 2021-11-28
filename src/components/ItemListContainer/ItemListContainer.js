@@ -43,10 +43,9 @@ const ItemListContainer = ( { titulo, subtitulo } ) => {
             {cargando ? 
                 <h2 className="bg-dark text-center text-danger p-4">SE ESTÁN CARGANDO LOS PRODUCTOS...</h2> 
                 :
-                <div className="container-fluid">
-                    <div className="row bg-gradient p-3 galeria">
-                        <ItemList items={productos} />
-                    </div>
+                <div className="container-fluid colorItemListContainer bg-gradient p-3 mt-4 mb-2">
+                    <h3 className="display-3 text-center text-white p-2 mb-3">Nuestros chocolates</h3>
+                    <ItemList items={productos} />
                 </div>
             }
         </div>

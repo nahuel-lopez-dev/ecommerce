@@ -27,11 +27,10 @@ const ItemDetail = ({ id, nombre, desc, precio, stock, imagen }) => {
             <ItemCount onAdd={addToCart} stock={stock} initial={0} />
             :
             <div className="container d-flex justify-content-center">
-              <Button as={Link} to='/cart' className="col-4" variant="dark bg-gradient">Terminar compra</Button>
+              <Button as={Link} to='/cart' className="col-10 col-md-8 col-lg-6 p-2" variant="dark bg-gradient">Terminar compra</Button>
             </div>
           }
-
-          <Button as={Link} to={'/'} variant="danger bg-gradient">Volver</Button>
+          <Button as={Link} to={'/'} variant="danger bg-gradient mt-4">Volver</Button>
         </Card.Body>
       </Card>
     </Container >
