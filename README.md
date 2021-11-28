@@ -31,23 +31,23 @@ Consiste en un ecommerce implementado con React.js junto React Router, React Hoo
 **Sobre el flujo de compra:**
 
 ### 1. Home:
-## ![](public/images/flujo-compra/home)
+## ![](public/images/flujo-compra/home.png)
 
 ### 2. Detalle del producto seleccionado:
 
-## ![](public/images/flujo-compra/detalle-producto)
+## ![](public/images/flujo-compra/detalle-producto.png)
 
 ### 3. Carrito de compras, con productos seleccionados:
 
-## ![](public/images/flujo-compra/carrito-compra)
+## ![](public/images/flujo-compra/carrito-compra.png)
 
 ### 4. Fin de la compra:
 
-## ![](public/images/flujo-compra/carrito-compra-final-mensaje)
+## ![](public/images/flujo-compra/carrito-compra-final-mensaje.png)
 
 ### Si no hay productos en el carrito:
 
-## ![](public/images/flujo-compra/carrito-vacio)
+## ![](public/images/flujo-compra/carrito-vacio.png)
 # *Flujo de Compra*
   
 Para poder comprar uno o más productos, se debe seleccionar desde el Home, en la galería de productos, "ver detalle" A partir de ahí, se debe seleccionar la cantidad del producto para añadirlo al carrito. Para que se habilite el botón de agregar al carrito, debe haber al menos un producto seleccionado. No se permite restar unidades inferiores a cero ni tampoco superar el stock disponible.
