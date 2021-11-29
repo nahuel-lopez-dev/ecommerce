@@ -41,11 +41,14 @@ Consiste en un ecommerce implementado con React.js junto React Router, React Hoo
 
 ## ![](public/images/flujo-compra/carrito-compra.png)
 
-### 4. Fin de la compra:
+### 4. Carrito de compras, con productos y formulario completo:
+
+## ![](public/images/flujo-compra/carrito-compra-final.png)
+### 5. Fin de la compra y mensaje al usuario:
 
 ## ![](public/images/flujo-compra/carrito-compra-final-mensaje.png)
 
-### Si no hay productos en el carrito:
+### 6. Si no hay productos en el carrito:
 
 ## ![](public/images/flujo-compra/carrito-vacio.png)
 # *Flujo de Compra*
