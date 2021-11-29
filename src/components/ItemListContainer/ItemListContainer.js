@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import { getFirestore } from "../../Firebase/firebase";
 import "./ItemListContainer.css"
+import Loading from "../Loading/Loading"
 
 const ItemListContainer = ( { titulo, subtitulo } ) => {
 
@@ -41,7 +42,7 @@ const ItemListContainer = ( { titulo, subtitulo } ) => {
             </div>
             {/* Si está cargando los productos muestro el mensaje, sino llamo a ItemList con productos */}
             {cargando ? 
-                <h2 className="bg-dark text-center text-danger p-4">SE ESTÁN CARGANDO LOS PRODUCTOS...</h2> 
+                <Loading /> 
                 :
                 <div className="container-fluid colorItemListContainer bg-gradient p-3 mt-4 mb-2">
                     <h3 className="display-3 text-center text-white p-2 mb-3">Nuestros chocolates</h3>

@@ -1,3 +1,4 @@
+import Loading from "../Loading/Loading"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
@@ -32,7 +33,7 @@ const ItemDetailContainer = () => {
     return (
         <div className="container-fluid">
             <div className="row bg-dark bg-gradient mt-4 mb-4">
-                {cargando ? <h2 className="bg-dark text-center text-danger p-4">SE ESTÁ CARGANDO EL PRODUCTO</h2> :
+                {cargando ? <Loading /> :
                     <ItemDetail
                         key={`detail-${producto.id}`}
                         id={producto.id}
