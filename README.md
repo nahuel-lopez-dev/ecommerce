@@ -12,7 +12,7 @@ Consiste en un ecommerce implementado con React.js junto React Router, React Hoo
 
 ## *Version 1.0.0:*
 
-- [![App](https://img.shields.io/badge/App-informational?style=for-the-badge&logo=netlify&logoColor=fff&color=23272d)](https://enlaceNetlify.com)
+- [![App](https://img.shields.io/badge/App-informational?style=for-the-badge&logo=netlify&logoColor=fff&color=23272d)](https://https://determined-goldberg-229a88.netlify.app/)
 
 - Se usa como base de datos Firestore
 ## *Desarrollado con:*
