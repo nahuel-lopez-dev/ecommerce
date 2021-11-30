@@ -26,9 +26,12 @@ Consiste en un ecommerce implementado con React.js junto React Router, React Hoo
 - [Bootstrap](https://getbootstrap.com/)
 - [react-icons](https://react-icons.github.io/react-icons)
 
-# *Screenshots:*
+# *Sobre el flujo de compra:*
 
-**Sobre el flujo de compra:**
+- [![Gif](https://img.shields.io/badge/Gif-informational?style=for-the-badge&logoColor=fff&color=23272d)](public/gif-flujo-compra.gif)
+<!-- ## ![](public/gif-flujo-compra.gif) -->
+
+**Screenshots:**
 
 ### 1. Home:
 ## ![](public/images/flujo-compra/home.png)
@@ -51,7 +54,7 @@ Consiste en un ecommerce implementado con React.js junto React Router, React Hoo
 ### 6. Si no hay productos en el carrito:
 
 ## ![](public/images/flujo-compra/carrito-vacio.png)
-# *Flujo de Compra*
+# *Flujo de Compra - Descripción*
   
 Para poder comprar uno o más productos, se debe seleccionar desde el Home, en la galería de productos, "COMPRAR" A partir de ahí, ya en la vista de detalle del producto, se debe seleccionar su cantidad para añadirlo al carrito. Para que se habilite el botón de agregar al carrito, debe haber al menos un producto seleccionado. No se permite restar unidades inferiores a cero ni tampoco superar el stock disponible.
 Para agregar más productos al carrito, se puede volver al home para seguir sumando productos, que a la vez, de seleccionar el mismo, no se duplica en el carrito, sino que se agrega a la cantidad anteriormente seleccionada.
@@ -75,6 +78,28 @@ En el caso de haber agregado productos al carrito, con el fin de terminar la com
 ## 14. *CartContext*
 ## 15. *FormBuyer*
 #
+
+# Importante: para descargar y usar el proyecto
+
+### Seguir los siguientes pasos:
+
+- 1. Clonar _'ecommerce'_ repository from GitHub. Abrir la terminal y tipear:
+
+  ```bash
+  git clone https://github.com/Nahuel-DevOne/ecommerce
+  ```
+- 2. cd dentro del directorio de la carpeta y tipear:
+
+  ```bash
+  npm install
+  ```
+  Esto instala las dependencias necesarias.
+
+- 3. Para correr el proyecto:
+
+  ```bash
+  npm start
+  ```
 # ** Información por defecto, con *`Create React App:`* **
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
