@@ -28,8 +28,8 @@ Consiste en un ecommerce implementado con React.js junto React Router, React Hoo
 
 # *Sobre el flujo de compra:*
 
-- [![Gif](https://img.shields.io/badge/Gif-informational?style=for-the-badge&logoColor=fff&color=23272d)](public/gif-flujo-compra.gif)
-<!-- ## ![](public/gif-flujo-compra.gif) -->
+- [![Gif](https://img.shields.io/badge/Gif-informational?style=for-the-badge&logoColor=fff&color=23272d)](public/flujo-compra.gif)
+
 
 **Screenshots:**
 
@@ -83,19 +83,19 @@ En el caso de haber agregado productos al carrito, con el fin de terminar la com
 
 ### Seguir los siguientes pasos:
 
-- 1. Clonar _'ecommerce'_ repository from GitHub. Abrir la terminal y tipear:
+- Clonar _'ecommerce'_ repository from GitHub. Abrir la terminal y tipear:
 
   ```bash
   git clone https://github.com/Nahuel-DevOne/ecommerce
   ```
-- 2. cd dentro del directorio de la carpeta y tipear:
+- cd dentro del directorio de la carpeta y tipear:
 
   ```bash
   npm install
   ```
   Esto instala las dependencias necesarias.
 
-- 3. Para correr el proyecto:
+- Para correr el proyecto:
 
   ```bash
   npm start
