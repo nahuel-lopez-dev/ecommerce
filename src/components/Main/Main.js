@@ -7,7 +7,6 @@ import { Switch, Route } from "react-router"
 
 const Main = () => {
 
-    /** funciones, lógica, variables, etc **/
     const greeting = "Bienvenid@ a Ecommerce";
     const slogan = "Donde nunca es tarde para comprar un chocolate";
 

@@ -9,11 +9,10 @@ const firebaseConfig = {
     messagingSenderId: "15531177102",
     appId: "1:15531177102:web:3eb2d74a230cd2f96bc5df"
   };
-
-//inicializa la conexión a mi base de datos en Firebase  
+  
 const app = firebase.initializeApp(firebaseConfig)
 
 export function getFirestore(){
-    //para poder usar firestore
+  
     return firebase.firestore(app)
 }

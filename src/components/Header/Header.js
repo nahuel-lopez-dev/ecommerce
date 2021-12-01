@@ -1,7 +1,7 @@
 import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
-import CartWidget from '../CartWidget/CartWidget'
 import { LogoIcono } from '../LogoIcono/LogoIcono'
 import { Link } from "react-router-dom"
+import CartWidget from '../CartWidget/CartWidget'
 
 export const header = ({cantidadItems}) => {
     return (

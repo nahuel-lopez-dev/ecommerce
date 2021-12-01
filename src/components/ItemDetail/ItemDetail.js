@@ -22,7 +22,6 @@ const ItemDetail = ({ id, nombre, desc, precio, stock, imagen }) => {
           <Card.Title className="fs-1 text-center">{nombre}</Card.Title>
           <Card.Text className="text-center">{desc}</Card.Text>
           <Card.Subtitle className="p-2" style={{ textAlign: "center" }}><strong className="fs-3">$ {precio}</strong></Card.Subtitle>
-
           {!add ?
             <ItemCount onAdd={addToCart} stock={stock} initial={0} />
             :

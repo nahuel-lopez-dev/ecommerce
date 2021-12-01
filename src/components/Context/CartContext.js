@@ -2,14 +2,12 @@ import React, { useState } from 'react'
 
 const Context = React.createContext()
 
-// Se crea funcion que va a tener todo el resto de funciones
-// Funcion proveedora que va a envolver a App y permitirá que cualquier otro componente acceda a metodos, variables, estados, etc
 const CartFunction = ({ children }) => {
-  const [cart, setCart] = useState([]) // estado del carrito
-  const [unidades, setUnidades] = useState(0) // unidades me dice cuantos productos distintos tengo
-  const [total, setTotal] = useState(0) // total me guarda el total del carrito que llevo acumulado
+  
+  const [cart, setCart] = useState([]) 
+  const [unidades, setUnidades] = useState(0) 
+  const [total, setTotal] = useState(0) 
 
-  // Funcion con la que va a agregar los productos
   const onAdd = (producto, cantidad) => {
 
     if (!isInCart(producto.id)) {
@@ -25,10 +23,9 @@ const CartFunction = ({ children }) => {
         }
         ]
       )
-      setUnidades(unidades + 1) // agrego un producto y la cantidad de ese producto
+      setUnidades(unidades + 1) 
       setTotal(total + (producto.precio * cantidad))
     } else {
-      // Actualizo el item
       const cartAux = cart.map((item) => {
         if (item.id === producto.id) {
           item.cantidad += cantidad

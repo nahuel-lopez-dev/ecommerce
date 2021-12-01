@@ -1,6 +1,5 @@
 import { Spinner, Container } from 'react-bootstrap'
-
-// Spinner de carga 
+ 
 const Loading = () => {
   return (
     <div className="mt-5 mb-5">
